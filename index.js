@@ -184,6 +184,7 @@ async function uploadToNightscout(measurementData) {
         logger.info("Upload of " + formattedMeasurements.length + " measurements to Nightscout successfull");
     } catch (error) {
         logger.error("Upload to Nightscout failed");
+        logger.error(error);
         deleteToken();
     }
 }
